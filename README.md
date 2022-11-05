@@ -92,5 +92,12 @@ Step 2 : Deploy Spring Boot App to kubernetes pods:
 		-> Checking the health of each component:
 		
 				-> execute the command : minikube dashboard (this will re-direct to kubernetes dashboard)
+				
+----------------------------------------------------
+Use of ConfigMap & Secrets in K8s
+----------------------------------------------------
+
+![image](https://user-images.githubusercontent.com/10458982/200140238-a43c42cb-9581-4cf3-b497-738e0cbbcf8f.png)
+
 
 
