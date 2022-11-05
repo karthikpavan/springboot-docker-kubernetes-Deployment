@@ -97,7 +97,30 @@ Step 2 : Deploy Spring Boot App to kubernetes pods:
 Use of ConfigMap & Secrets in K8s
 ----------------------------------------------------
 
+-> Kubernetes will provide ConfigMap & Secrets as 2 seperate component to manage our sensitive configuration data.
+
+-> Both component ConfigMap & Secrets are present outside of the pods so with in a node all the pod can access it.
+
 ![image](https://user-images.githubusercontent.com/10458982/200140238-a43c42cb-9581-4cf3-b497-738e0cbbcf8f.png)
+
+1. ConfigMap : Stores information as plain text with keyValue pattern
+
+			-> Database details like Host & DB name can be kept in ConfigMap
+			
+			-> data can stored using yaml file (refer : mysql-configMap.yaml from codebase)
+			
+					     
+2. Secrets : Stores information as encrypted pattern 
+
+			-> UN & Password can be kept in Secrets as this information need to be encrypted
+			
+			-> in kubernetes we can use command : echo -n 'text to encrypt' | base64
+			
+				-> sample example : echo -n 'root' | base64 
+				
+					   output : cm9vdA==
+
+
 
 
 
